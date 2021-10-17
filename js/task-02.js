@@ -9,6 +9,21 @@ const ingredients = [
   'Condiments',
 ];
 
+// const itemEl = document.querySelector('#ingredients');
+
+// ingredients.forEach (ingredient => {
+// //1
+//   const newEl = document.createElement('li');
+// //2
+//   newEl.textContent = ingredient;
+// //3
+//   newEl.classList.add('item');
+//   itemEl.append(newEl);
+// }); 
+
+const itemEl = document.querySelector('#ingredients');
+
+const array = [];
 
 ingredients.forEach (ingredient => {
 //1
@@ -17,14 +32,11 @@ ingredients.forEach (ingredient => {
   newEl.textContent = ingredient;
 //3
   newEl.classList.add('item');
-//4
-  const itemEl = document.querySelector('#ingredients');
-  itemEl.append(newEl);
-
+  
+  array.push(newEl);
 }); 
 
-
-
+itemEl.append(...array);
 
 // Напиши скрипт, который для каждого элемента массива ingredients:
 
